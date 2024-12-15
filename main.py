@@ -1,12 +1,12 @@
 from telebot import TeleBot
 from constants import TOKEN
-from todo.controlles import Controller
+from controllers import Controller
 
-
+# Создаем экземпляр бота
 bot = TeleBot(TOKEN)
 controller = Controller(bot)
 
-
+# Подключаем обработчики
 controller.register_handlers()
 
 if __name__ == "__main__":
